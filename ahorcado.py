@@ -36,14 +36,14 @@ class Game():
                 n += 1
             print("".join(self.palabraJugador))
             if self.letras == self.palabraJugador:
-                self.final("Felicidades, ganó el juego.")
+                self.final("Excelente, adivinó la palabra "+ self.palabra)
             else:
                 self.set_letra()  #Vuelve a solicitar letra
         else:
             self.intentos -= 1
             print("Incorrecto. Intentos: " + str(self.intentos))
             if self.intentos == 0:
-                self.final("Game Over, no ganó.")
+                self.final("Perdió, no pudo adivinar la palabra " + self.palabra)
             self.set_letra()
 
     def set_letra(self):
